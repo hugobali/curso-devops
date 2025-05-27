@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 env:
-  IMAGE_BASE_NAME: contactosapi
+  IMAGE_BASE_NAME: davioletx/contactosapi
 
 jobs:
   API_Image:
