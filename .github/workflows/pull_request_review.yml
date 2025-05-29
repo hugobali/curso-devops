@@ -3,7 +3,10 @@ name: Run Tests on Pull Request
 on:
   pull_request:
     branches:
-      - main 
+      - main
+
+env:
+  AZURE_MONITOR_CONNECTION_STRING: ${{ secrets.AZURE_MONITOR_KEY }}
 
 jobs:
   build-and-test:
