@@ -20,9 +20,12 @@ jobs:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1 
 
+    - name: Write SAS token to file
+      run: echo "${{secrets.SAS_TOKEN}}" > sas-token.conf
+
     - name: Terraform init
       id: init
-      run: terraform init -backend-config={{secrets.SAS_TOKEN}}
+      run: terraform init -backend-config=sas-token.conf
 
     - name: Terraform validate
       id: validate
