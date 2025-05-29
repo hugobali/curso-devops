@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AZURE_MONITOR_CONNECTION_STRING: ${{ secrets.AZURE_MONITOR_KEY }}
+  AZURE_MONITOR_CONNECTION_STRING: ${{secrets.AZURE_MONITOR_KEY}}
 
 jobs:
   build-and-test:
