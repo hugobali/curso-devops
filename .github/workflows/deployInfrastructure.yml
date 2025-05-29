@@ -23,6 +23,9 @@ jobs:
     - name: Write SAS token to file
       run: echo "${{secrets.SAS_TOKEN}}" > sas-token.conf
 
+    - name: Check SAS Tocken file
+      run: echo as-token.conf
+
     - name: Terraform init
       id: init
       run: terraform init -backend-config=sas-token.conf
